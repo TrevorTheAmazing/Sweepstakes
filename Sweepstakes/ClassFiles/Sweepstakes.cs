@@ -15,7 +15,6 @@ namespace Sweepstakes
         public Sweepstakes(string nameIn)
         {
             this.name = nameIn;
-            this.contestants = contestants;
         }
 
         //member methods

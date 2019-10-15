@@ -21,6 +21,9 @@ namespace Sweepstakes
             MarketingFirm newFirm = new MarketingFirm(managerType);
             newFirm.CreateSweepstakes("Black Friday");
             //newFirm.CreateSweepstakes("Spring Break"));
+
+            newFirm.GenerateSweepstakesWinner();
+            
         }
     }
 }

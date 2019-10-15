@@ -70,5 +70,12 @@ namespace Sweepstakes
         {
             return randomIn.Next(100000, 1000000);
         }
+
+        public void GenerateSweepstakesWinner()
+        {
+            Sweepstakes tempSweepstakes = sweepstakesManager.GetSweepstakes();
+            Contestant tempWinner = tempSweepstakes.PickWinner();
+            tempSweepstakes.PrintContestantInfo(tempWinner);            
+        }
     }
 }
