@@ -26,23 +26,28 @@ namespace Sweepstakes
 
         public Contestant PickWinner()
         {
-            Contestant tempWinner;
-            //pick a random dictionary regNum winningNumber
-            //foreach contestant in contestants
-            //if contestant.registrationNumber = winningNumber
-            return tempWinner;
+            bool success = false;
+            Random random = new Random();
+            Contestant tempWinner = null;
 
+            do
+            {
+                //pick a random dictionary regNum winningNumber
+                int tempDictNdx = random.Next(0, contestants.Count);
+                //if contestant.registrationNumber = winningNumber
+                if (contestants.TryGetValue(tempDictNdx, out tempWinner))
+                {
+                    success = true;                    
+                }                    
+
+            } while (!success);
+
+            return tempWinner;
         }
 
         public void PrintContestantInfo(Contestant contestant)
         {
-            //
-            Console.WriteLine("contestant info");
+            Console.WriteLine("call UserInterface.DisplayWinner(Contestant)");
         }
-
-        //public string NewRegistrationNumber()
-        //{
-        //    return "";
-        //}
     }
 }

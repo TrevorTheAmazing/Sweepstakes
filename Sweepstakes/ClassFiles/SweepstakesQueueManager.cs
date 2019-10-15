@@ -26,10 +26,8 @@ namespace Sweepstakes
 
         public Sweepstakes GetSweepstakes()
         {
-            Object sweepstakes;
-            //object tempObject = queue.Dequeue();
-            sweepstakes = queue.Dequeue();
-            return sweepstakes;
+            return queue.Dequeue() as Sweepstakes;
         }
     }
 }
+

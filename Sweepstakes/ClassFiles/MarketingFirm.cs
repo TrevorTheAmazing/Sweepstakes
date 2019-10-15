@@ -16,9 +16,6 @@ namespace Sweepstakes
         //constructor
         public MarketingFirm(int managerTypeIn)
         {
-            
-            
-
             switch (managerTypeIn)
             {
                 case 0:
@@ -40,17 +37,13 @@ namespace Sweepstakes
 
         //member methods
         public void CreateSweepstakes(string newSweepstakesNameIn)
-        {
-            //ISweepstakesManager 
-            //Sweepstakes tempSweepstakes = CreateContestant(new Sweepstakes("Spring Break"));
+        {            
             Sweepstakes tempSweepstakes = CreateContestant(new Sweepstakes(newSweepstakesNameIn));
             sweepstakesManager.InsertSweepstakes(tempSweepstakes);
         }
 
         public Sweepstakes CreateContestant(Sweepstakes sweepstakes)
         {
-            //will be returned to CreateSweepstakes() full of contestants to be passed to the manager
-            // loop that create random contestants 
             for (int i = 0; i < 100; i++)
             {
                 //get user input for name/email
@@ -69,8 +62,7 @@ namespace Sweepstakes
                     tempContestant.registrationNumber = GenerateRegistrationNumber(random);
                     sweepstakes.RegisterContestant(tempContestant);
                 }
-            }            
-                                                
+            }                                                            
             return sweepstakes;
         }
 

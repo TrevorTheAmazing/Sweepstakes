@@ -12,12 +12,15 @@ namespace Sweepstakes
         {
             int StackManager = 0;
             int QueueManager = 1;
-            int managerType;
+
+
             //set managerType using the UserInterface class
             //UserInterface.SetManagerType(string prompt, int opt1, int opt2, ref managerType )
+            int managerType = 0;
 
             MarketingFirm newFirm = new MarketingFirm(managerType);
             newFirm.CreateSweepstakes("Black Friday");
+            //newFirm.CreateSweepstakes("Spring Break"));
         }
     }
 }
