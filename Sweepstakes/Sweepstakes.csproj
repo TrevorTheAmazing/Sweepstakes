@@ -47,6 +47,8 @@
     <Compile Include="ClassFiles\ISweepstakesManager.cs" />
     <Compile Include="ClassFiles\MarketingFirm.cs" />
     <Compile Include="ClassFiles\Program.cs" />
+    <Compile Include="ClassFiles\UserInterface.cs" />
+    <Compile Include="ClassFiles\Validation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClassFiles\Sweepstakes.cs" />
     <Compile Include="ClassFiles\SweepstakesQueueManager.cs" />

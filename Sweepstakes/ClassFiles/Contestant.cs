@@ -12,15 +12,15 @@ namespace Sweepstakes
         public string firstName;
         public string lastName;
         public string email;
-        public string registrationNumber;
+        public int registrationNumber;
 
         //constructor
-        public Contestant()
+        public Contestant(int registrationNumberIn, string firstNameIn)
         {
-        this.firstName = "";
+        this.firstName = firstNameIn;
         this.lastName = "";
         this.email = "";
-        this.registrationNumber = "";
+        this.registrationNumber = registrationNumberIn;
         }
 
         //member methods

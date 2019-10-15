@@ -9,24 +9,74 @@ namespace Sweepstakes
     public class MarketingFirm
     {
         //member variables
+        Sweepstakes sweepstakes;
         ISweepstakesManager sweepstakesManager;
+        Random random = new Random();
+
         //constructor
-        public MarketingFirm(ISweepstakesManager sweepstakesManager)
+        public MarketingFirm(int managerTypeIn)
         {
-            this.sweepstakesManager = sweepstakesManager;
+            
+            
+
+            switch (managerTypeIn)
+            {
+                case 0:
+                    {
+                        this.sweepstakesManager = new SweepstakesStackManager();
+                        break;
+                    }
+                case 1:
+                    {
+                        this.sweepstakesManager = new SweepstakesQueueManager();
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+            }
         }
 
         //member methods
-        public void InsertSweepstakes(Sweepstakes sweepstakes)
+        public void CreateSweepstakes(string newSweepstakesNameIn)
         {
-
+            //ISweepstakesManager 
+            //Sweepstakes tempSweepstakes = CreateContestant(new Sweepstakes("Spring Break"));
+            Sweepstakes tempSweepstakes = CreateContestant(new Sweepstakes(newSweepstakesNameIn));
+            sweepstakesManager.InsertSweepstakes(tempSweepstakes);
         }
 
-        public Sweepstakes GetSweepstakes()
+        public Sweepstakes CreateContestant(Sweepstakes sweepstakes)
         {
-            Object object;
-            
+            //will be returned to CreateSweepstakes() full of contestants to be passed to the manager
+            // loop that create random contestants 
+            for (int i = 0; i < 100; i++)
+            {
+                //get user input for name/email
+                //loop through contestants
+                //if they are already registered, reject
+                //else create
+                string tempName = "Contestant " + i;
+                int tempRegNum = GenerateRegistrationNumber(random);
+                Contestant tempContestant = new Contestant(tempRegNum, tempName);
+                try
+                {
+                    sweepstakes.RegisterContestant(tempContestant);
+                }
+                catch(Exception)
+                {
+                    tempContestant.registrationNumber = GenerateRegistrationNumber(random);
+                    sweepstakes.RegisterContestant(tempContestant);
+                }
+            }            
+                                                
             return sweepstakes;
+        }
+
+        private int GenerateRegistrationNumber(Random randomIn)
+        {
+            return randomIn.Next(100000, 1000000);
         }
     }
 }

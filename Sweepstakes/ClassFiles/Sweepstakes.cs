@@ -8,35 +8,41 @@ namespace Sweepstakes
 {
     public class Sweepstakes
     {
-        Dictionary<int, string> dictionary = new Dictionary<int, string>();
-        string name;
+        Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
+        string name;        
 
         //constructor
         public Sweepstakes(string nameIn)
         {
             this.name = nameIn;
+            this.contestants = contestants;
         }
 
         //member methods
-        public void RegisterContestant(Contestant contestant)
+        public void RegisterContestant(Contestant contestantIn)
         {
-
+            contestants.Add(contestantIn.registrationNumber, contestantIn);
         }
 
         public Contestant PickWinner()
         {
-            Contestant contestant = new Contestant();
-            return contestant;
+            Contestant tempWinner;
+            //pick a random dictionary regNum winningNumber
+            //foreach contestant in contestants
+            //if contestant.registrationNumber = winningNumber
+            return tempWinner;
+
         }
 
         public void PrintContestantInfo(Contestant contestant)
         {
+            //
             Console.WriteLine("contestant info");
         }
 
-        public string NewRegistrationNumber()
-        {
-            return "";
-        }
+        //public string NewRegistrationNumber()
+        //{
+        //    return "";
+        //}
     }
 }
