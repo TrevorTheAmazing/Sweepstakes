@@ -17,6 +17,7 @@ namespace Sweepstakes
         {
             Console.WriteLine("new SweepstakesStackManager.stack");
             Console.WriteLine("stack.count = " + stack.Count);
+            this.stack = stack;
         }
 
         //member methods

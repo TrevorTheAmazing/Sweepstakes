@@ -1,0 +1,6 @@
+C:\Users\trevo\Dropbox\dcc\25 - algo&perf\Sweepstakes\Sweepstakes\obj\Debug\Sweepstakes.csprojAssemblyReference.cache
+C:\Users\trevo\Dropbox\dcc\25 - algo&perf\Sweepstakes\Sweepstakes\bin\Debug\Sweepstakes.exe.config
+C:\Users\trevo\Dropbox\dcc\25 - algo&perf\Sweepstakes\Sweepstakes\bin\Debug\Sweepstakes.exe
+C:\Users\trevo\Dropbox\dcc\25 - algo&perf\Sweepstakes\Sweepstakes\bin\Debug\Sweepstakes.pdb
+C:\Users\trevo\Dropbox\dcc\25 - algo&perf\Sweepstakes\Sweepstakes\obj\Debug\Sweepstakes.exe
+C:\Users\trevo\Dropbox\dcc\25 - algo&perf\Sweepstakes\Sweepstakes\obj\Debug\Sweepstakes.pdb

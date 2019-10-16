@@ -32,7 +32,8 @@ namespace Sweepstakes
             do
             {
                 //pick a random dictionary regNum winningNumber
-                int tempDictNdx = random.Next(0, contestants.Count);
+                //int tempDictNdx = random.Next(0, contestants.Count);
+                int tempDictNdx = random.Next(10000, 100000);
                 //if contestant.registrationNumber = winningNumber
                 if (contestants.TryGetValue(tempDictNdx, out tempWinner))
                 {
@@ -47,6 +48,7 @@ namespace Sweepstakes
         public void PrintContestantInfo(Contestant contestant)
         {
             Console.WriteLine("call UserInterface.DisplayWinner(Contestant)");
+            Console.ReadLine();//!//
         }
     }
 }

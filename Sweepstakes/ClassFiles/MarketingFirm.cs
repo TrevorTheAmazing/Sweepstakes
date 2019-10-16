@@ -57,8 +57,9 @@ namespace Sweepstakes
                 {
                     sweepstakes.RegisterContestant(tempContestant);
                 }
-                catch(Exception)
+                catch(Exception e)
                 {
+                    Console.WriteLine(e.Message);
                     tempContestant.registrationNumber = GenerateRegistrationNumber(random);
                     sweepstakes.RegisterContestant(tempContestant);
                 }
@@ -68,7 +69,7 @@ namespace Sweepstakes
 
         private int GenerateRegistrationNumber(Random randomIn)
         {
-            return randomIn.Next(100000, 1000000);
+            return randomIn.Next(10000, 100000);
         }
 
         public void GenerateSweepstakesWinner()
