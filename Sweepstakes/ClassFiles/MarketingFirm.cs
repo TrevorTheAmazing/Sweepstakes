@@ -14,6 +14,7 @@ namespace Sweepstakes
         Random random = new Random();
 
         //constructor
+        //public MarketingFirm(int managerTypeIn)
         public MarketingFirm(int managerTypeIn)
         {
             switch (managerTypeIn)
@@ -44,16 +45,20 @@ namespace Sweepstakes
 
         public Sweepstakes CreateContestant(Sweepstakes sweepstakes)
         {
-            for (int i = 0; i < 100; i++)
-            {
-                //get user input for name/email
-                //loop through contestants
-                //if they are already registered, reject
-                //else create
-                string tempFirstName = "Contestant";
-                string tempLastName = i.ToString();
-                string tempEmail = tempFirstName + "." + tempLastName + "@email.com";
+            //UNCOMMENT TO AUTOMATE THIS PROCESS
+            //for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 2; i++)
+            {                
+                //string tempFirstName = "Contestant";
+                //string tempLastName = i.ToString();
+                //string tempEmail = tempFirstName + "." + tempLastName + "@email.com";
+
+                string tempFirstName = UserInterface.GetContestantFirstName();
+                string tempLastName = UserInterface.GetContestantLastName();
+                string tempEmail = UserInterface.GetContestantEmail();
+                
                 int tempRegNum = GenerateRegistrationNumber(random);
+
                 Contestant tempContestant = new Contestant(tempFirstName, tempLastName, tempEmail, tempRegNum);
                 try
                 {
@@ -64,6 +69,7 @@ namespace Sweepstakes
                     Console.WriteLine(e.Message);
                     tempContestant.registrationNumber = GenerateRegistrationNumber(random);
                     sweepstakes.RegisterContestant(tempContestant);
+                    
                 }
             }                                                            
             return sweepstakes;

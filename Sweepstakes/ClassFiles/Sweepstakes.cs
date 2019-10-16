@@ -10,12 +10,12 @@ namespace Sweepstakes
     public class Sweepstakes
     {
         Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
-        public string name;        
+        public string name;
 
         //constructor
         public Sweepstakes(string nameIn)
         {
-            this.name = nameIn;
+            this.name = nameIn;            
         }
 
         //member methods
@@ -45,8 +45,9 @@ namespace Sweepstakes
 
         public void PrintContestantInfo(Sweepstakes sweepstakesIn, Contestant contestantIn)
         {
-            DisplayWinner(sweepstakesIn, contestantIn);
-            
+            UserInterface.DisplayWinner(sweepstakesIn, contestantIn);            
         }
+
+     
     }
 }

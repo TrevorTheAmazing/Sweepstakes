@@ -5,11 +5,6 @@ VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sweepstakes", "Sweepstakes.csproj", "{E9B24AF1-0528-4145-8B90-970F148D96DA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A6F27BD9-8EDC-4DD3-B11A-DAEDA63890F0}"
-	ProjectSection(SolutionItems) = preProject
-		ClassFiles\UserInterface.cs = ClassFiles\UserInterface.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

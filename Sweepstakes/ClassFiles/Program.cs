@@ -10,15 +10,15 @@ namespace Sweepstakes
     {
         static void Main(string[] args)
         {
-            int StackManager = 0;
-            int QueueManager = 1;
+            int managerType = -1;
 
+            UserInterface.Welcome();
 
             //set managerType using the UserInterface class
-            //UserInterface.SetManagerType(string prompt, int opt1, int opt2, ref managerType )
-            int managerType = 0;
-
+            UserInterface.SetManagerType("Would you like to use the Queue manager?", 0, 1, ref managerType);
+            
             MarketingFirm newFirm = new MarketingFirm(managerType);
+
             newFirm.CreateSweepstakes("Black Friday");
             //newFirm.CreateSweepstakes("Spring Break"));
 
