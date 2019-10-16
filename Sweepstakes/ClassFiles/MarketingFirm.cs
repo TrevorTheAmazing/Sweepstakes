@@ -50,9 +50,11 @@ namespace Sweepstakes
                 //loop through contestants
                 //if they are already registered, reject
                 //else create
-                string tempName = "Contestant " + i;
+                string tempFirstName = "Contestant";
+                string tempLastName = i.ToString();
+                string tempEmail = tempFirstName + "." + tempLastName + "@email.com";
                 int tempRegNum = GenerateRegistrationNumber(random);
-                Contestant tempContestant = new Contestant(tempRegNum, tempName);
+                Contestant tempContestant = new Contestant(tempFirstName, tempLastName, tempEmail, tempRegNum);
                 try
                 {
                     sweepstakes.RegisterContestant(tempContestant);
@@ -76,7 +78,7 @@ namespace Sweepstakes
         {
             Sweepstakes tempSweepstakes = sweepstakesManager.GetSweepstakes();
             Contestant tempWinner = tempSweepstakes.PickWinner();
-            tempSweepstakes.PrintContestantInfo(tempWinner);            
+            tempSweepstakes.PrintContestantInfo(tempSweepstakes, tempWinner);            
         }
     }
 }

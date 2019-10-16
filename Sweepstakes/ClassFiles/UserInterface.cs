@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sweepstakes.ClassFiles
+namespace Sweepstakes
 {
-    class UserInterface
+    public class UserInterface
     {
         //member variables
-
+        
 
         //constructor
         public UserInterface()
@@ -18,6 +18,10 @@ namespace Sweepstakes.ClassFiles
         }
 
         //member methods
-
+        public void DisplayWinner(Sweepstakes sweepstakesIn, Contestant contestantIn)
+        {
+            Console.WriteLine( contestantIn.firstName + ", Contestant #" + contestantIn.registrationNumber + " has won the " + sweepstakesIn.name + " sweepstakes!");
+            Console.ReadLine();
+        }
     }
 }

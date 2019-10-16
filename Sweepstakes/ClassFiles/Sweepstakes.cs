@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sweepstakes.ClassFiles;
 
 namespace Sweepstakes
 {
     public class Sweepstakes
     {
         Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
-        string name;        
+        public string name;        
 
         //constructor
         public Sweepstakes(string nameIn)
@@ -31,10 +32,7 @@ namespace Sweepstakes
 
             do
             {
-                //pick a random dictionary regNum winningNumber
-                //int tempDictNdx = random.Next(0, contestants.Count);
                 int tempDictNdx = random.Next(10000, 100000);
-                //if contestant.registrationNumber = winningNumber
                 if (contestants.TryGetValue(tempDictNdx, out tempWinner))
                 {
                     success = true;                    
@@ -45,10 +43,10 @@ namespace Sweepstakes
             return tempWinner;
         }
 
-        public void PrintContestantInfo(Contestant contestant)
+        public void PrintContestantInfo(Sweepstakes sweepstakesIn, Contestant contestantIn)
         {
-            Console.WriteLine("call UserInterface.DisplayWinner(Contestant)");
-            Console.ReadLine();//!//
+            DisplayWinner(sweepstakesIn, contestantIn);
+            
         }
     }
 }

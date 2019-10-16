@@ -15,7 +15,7 @@ namespace Sweepstakes
         //constructor
         public SweepstakesQueueManager()
         {
-
+            this.queue = queue;
         }
 
         //member methods

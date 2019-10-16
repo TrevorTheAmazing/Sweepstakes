@@ -15,8 +15,6 @@ namespace Sweepstakes
         //constructor
         public SweepstakesStackManager()
         {
-            Console.WriteLine("new SweepstakesStackManager.stack");
-            Console.WriteLine("stack.count = " + stack.Count);
             this.stack = stack;
         }
 
