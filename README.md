@@ -13,12 +13,10 @@ DONE - (10 points) As a developer, I want to implement dependency injection in m
 DONE - (10 points) As a developer, I want my SweepstakesStackManager class and SweepstakesQueueManager class to inherit from the ISweepstakesManager interface and implement the methods from the ISweepstakesManager interface using Stack and Queue methods.
 DONE - (10 points) As a developer, I want to create a SweepstakesStackManager class that uses the Stack data structure as an underlying structure.
 DONE - (10 points) As a developer, I want to create a SweepstakesQueueManager class that uses the Queue data structure as an underlying structure.
+DONE - (10 points) As a developer, I want to create a user interface for any information the application would need to get from the user. One example would be the functionality to assign a Contestant object a first name, last name, email address, and registration number.
 DONE - (15 points) As a developer, I want to create a Sweepstakes class that uses the Dictionary data structure as an underlying structure. The Sweepstakes class will have the following methods with full implementation (write the functionality) of each method: Sweepstakes(string name), void RegisterContestant(Contestant contestant), Contestant PickWinner(), void PrintContestantInfo(Contestant contestant)
 
-(10 points) As a developer, I want to create a user interface for any information the application would need to get from the user. 
-One example would be the functionality to assign a Contestant object a first name, last name, email address, and registration number.
-
 Bonus Points:
-(5 points) As a developer, I want to use the observer design pattern to notify all users of the winning contestant, with the winner of the sweepstakes getting a different message specifically congratulating them on being the winner. 
-(5 points) As a developer, I want to send an actual email to a sweepstakes winner using an MailKit API https://github.com/jstedfast/MailKit
+DONE - (5 points) As a developer, I want to use the observer design pattern to notify all users of the winning contestant, with the winner of the sweepstakes getting a different message specifically congratulating them on being the winner. 
+DONE - (5 points) As a developer, I want to send an actual email to a sweepstakes winner using an MailKit API https://github.com/jstedfast/MailKit
 

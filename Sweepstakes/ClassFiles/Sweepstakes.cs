@@ -46,6 +46,8 @@ namespace Sweepstakes
 
             } while (!success);
 
+            MailKit.SendMessage(tempWinner.firstName + " " + tempWinner.lastName, this.name, tempWinner.email);
+
             return tempWinner;
         }
 

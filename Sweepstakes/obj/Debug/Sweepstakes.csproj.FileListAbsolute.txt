@@ -4,3 +4,9 @@ C:\Users\trevo\Dropbox\dcc\25 - algo&perf\Sweepstakes\Sweepstakes\bin\Debug\Swee
 C:\Users\trevo\Dropbox\dcc\25 - algo&perf\Sweepstakes\Sweepstakes\bin\Debug\Sweepstakes.pdb
 C:\Users\trevo\Dropbox\dcc\25 - algo&perf\Sweepstakes\Sweepstakes\obj\Debug\Sweepstakes.exe
 C:\Users\trevo\Dropbox\dcc\25 - algo&perf\Sweepstakes\Sweepstakes\obj\Debug\Sweepstakes.pdb
+C:\Users\trevo\Dropbox\dcc\25 - algo&perf\Sweepstakes\Sweepstakes\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\trevo\Dropbox\dcc\25 - algo&perf\Sweepstakes\Sweepstakes\bin\Debug\MailKit.dll
+C:\Users\trevo\Dropbox\dcc\25 - algo&perf\Sweepstakes\Sweepstakes\bin\Debug\MimeKit.dll
+C:\Users\trevo\Dropbox\dcc\25 - algo&perf\Sweepstakes\Sweepstakes\bin\Debug\MailKit.xml
+C:\Users\trevo\Dropbox\dcc\25 - algo&perf\Sweepstakes\Sweepstakes\bin\Debug\MimeKit.xml
+C:\Users\trevo\Dropbox\dcc\25 - algo&perf\Sweepstakes\Sweepstakes\obj\Debug\Sweepstakes.csproj.CopyComplete
