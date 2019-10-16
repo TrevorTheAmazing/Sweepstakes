@@ -9,15 +9,10 @@ namespace Sweepstakes
 {
     public static class UserInterface
     {
-        //member variables
-        
-
-
-
         //member methods
         public static void DisplayWinner(Sweepstakes sweepstakesIn, Contestant contestantIn)
         {
-            Console.WriteLine( contestantIn.firstName + ", Contestant #" + contestantIn.registrationNumber + " has won the " + sweepstakesIn.name + " sweepstakes!");
+            Console.WriteLine( "Sweepstakes/PrintContestantInfo/DisplayWinner: " + contestantIn.firstName + ", Contestant #" + contestantIn.registrationNumber + " has won the " + sweepstakesIn.name + " sweepstakes!");
             Console.ReadLine();
         }
 
@@ -54,5 +49,24 @@ namespace Sweepstakes
             string tempString = Validation.GetUserInput("Please enter the contestant's email address: ", "str");
             return tempString;
         }
+
+        public static void NotifyParticipants(string nameOfSweepstakes, string nameOfWinner)
+        {
+            Console.WriteLine("TO ALL P'PANTS: The " + nameOfSweepstakes + " sweepstakes are over.");
+            Console.WriteLine("TO ALL P'PANTS: " + nameOfWinner + " won the " + nameOfSweepstakes + " sweepstakes.");
+            Console.ReadLine();
+        }
+
+        public static void NotifyWinner(string nameOfWinner)
+        {
+            Console.WriteLine("TO THE WINNER: ... and you, " + nameOfWinner + ", have won!");
+            Console.ReadLine();
+        }
+
+        public static void ProgramEnd()
+        {
+            Console.WriteLine("End of program.");
+        }
+
     }
 }

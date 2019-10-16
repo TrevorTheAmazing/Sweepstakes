@@ -15,7 +15,7 @@ namespace Sweepstakes
         //constructor
         public SweepstakesStackManager()
         {
-            this.stack = stack;
+
         }
 
         //member methods

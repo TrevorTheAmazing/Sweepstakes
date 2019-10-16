@@ -23,6 +23,8 @@ namespace Sweepstakes
             //newFirm.CreateSweepstakes("Spring Break"));
 
             newFirm.GenerateSweepstakesWinner();
+            UserInterface.ProgramEnd();
+            Console.ReadLine();
             
         }
     }

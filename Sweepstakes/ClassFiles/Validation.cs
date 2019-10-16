@@ -8,12 +8,7 @@ namespace Sweepstakes.ClassFiles
 {
     public static class Validation
     {
-        //memb vars
-
-        //constr?
-        
-
-        //memb meth
+        //member methods
         public static string GetUserInput(string message, string ValidationType)
         {
             bool inputIsValid = false;
@@ -68,7 +63,6 @@ namespace Sweepstakes.ClassFiles
                             GetUserInput(message, "str");
                             return "";
                         }
-                    //return ValidStr(Console.ReadLine());
                     default:
                         return "";
                 }
@@ -83,13 +77,11 @@ namespace Sweepstakes.ClassFiles
                 if (!string.IsNullOrEmpty(Input))
                 {
                     string tempString = Input.ToLower();
-                    //bool tempResult = true;
                     tempResult = true;
                     for (int i = 0; i < Input.Length; i++)
                     {
                         foreach (char asciiChar in Input.ToCharArray())
                         {
-                            //if (!(asciiChar > 96 && asciiChar < 123))
                             if (!(asciiChar > 32 && asciiChar < 127))
                             {
                                 tempResult = false;

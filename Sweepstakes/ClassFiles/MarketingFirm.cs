@@ -47,7 +47,7 @@ namespace Sweepstakes
         {
             //UNCOMMENT TO AUTOMATE THIS PROCESS
             //for (int i = 0; i < 100; i++)
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 3; i++)
             {                
                 //string tempFirstName = "Contestant";
                 //string tempLastName = i.ToString();
@@ -83,8 +83,9 @@ namespace Sweepstakes
         public void GenerateSweepstakesWinner()
         {
             Sweepstakes tempSweepstakes = sweepstakesManager.GetSweepstakes();
-            Contestant tempWinner = tempSweepstakes.PickWinner();
-            tempSweepstakes.PrintContestantInfo(tempSweepstakes, tempWinner);            
+            Contestant tempWinner = tempSweepstakes.PickWinner();            
+            tempSweepstakes.PrintContestantInfo(tempSweepstakes, tempWinner);
+            tempSweepstakes.NotifyContestants();
         }
     }
 }

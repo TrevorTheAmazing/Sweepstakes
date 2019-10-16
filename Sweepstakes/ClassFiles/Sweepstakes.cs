@@ -10,18 +10,23 @@ namespace Sweepstakes
     public class Sweepstakes
     {
         Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
+        List<IParticipant> participants = new List<IParticipant>();
         public string name;
+        public int winnerId;
+        public IParticipant notifyId;
 
         //constructor
         public Sweepstakes(string nameIn)
         {
-            this.name = nameIn;            
+            this.name = nameIn;
+            this.winnerId = -1;
         }
 
         //member methods
         public void RegisterContestant(Contestant contestantIn)
         {
             contestants.Add(contestantIn.registrationNumber, contestantIn);
+            Participate(contestantIn);            
         }
 
         public Contestant PickWinner()
@@ -35,6 +40,7 @@ namespace Sweepstakes
                 int tempDictNdx = random.Next(10000, 100000);
                 if (contestants.TryGetValue(tempDictNdx, out tempWinner))
                 {
+                    winnerId = tempWinner.registrationNumber;
                     success = true;                    
                 }                    
 
@@ -48,6 +54,27 @@ namespace Sweepstakes
             UserInterface.DisplayWinner(sweepstakesIn, contestantIn);            
         }
 
-     
+        public void Participate(IParticipant participantIn)
+        {
+            participants.Add(participantIn);
+        }
+
+        public void NotifyContestants()
+        {
+            string nameOfWinner = "";
+            Contestant tempWinner;
+
+            if (contestants.TryGetValue(this.winnerId, out tempWinner))
+            {
+                nameOfWinner = tempWinner.firstName + " " + tempWinner.lastName;
+            }
+
+            foreach (IParticipant participant in participants)
+            {
+                participant.IsWinner = (participant.NotifyId == this.winnerId);
+                participant.Notify(participant, this.name, nameOfWinner);
+            }
+
+        }
     }
 }
