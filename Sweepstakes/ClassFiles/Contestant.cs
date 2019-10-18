@@ -21,7 +21,8 @@ namespace Sweepstakes
             }
             set
             {
-                NotifyId = registrationNumber;
+                //10-18-19 TLC NotifyId = registrationNumber;
+                value = registrationNumber;
             }
         }
         private bool isWinner;
