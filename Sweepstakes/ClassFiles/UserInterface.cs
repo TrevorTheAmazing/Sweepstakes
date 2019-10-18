@@ -16,16 +16,32 @@ namespace Sweepstakes
             Console.ReadLine();
         }
 
-        public static void SetManagerType(string prompt, int opt1, int opt2, ref int managerType)
+        //10-18-19 TLC public static void SetManagerType(string prompt, int opt1, int opt2, ref int managerType)
+        //public static void SetManagerType(string prompt)
+        public static string SetManagerType(string prompt)
         {
-            int tempInt = 0;
-            Console.WriteLine("There are two different types of manager types: Stack, and Queue.");
-            if (Validation.GetUserInput(prompt, "bool")=="1")
+            //10-18-19 TLC int tempInt = 0;
+            //10-18-19 TLC Console.WriteLine("There are two different types of manager types: Stack, and Queue.");
+            //10-18-19 TLC if (Validation.GetUserInput(prompt, "bool")=="1")
+
+            //ISweepstakesManager tempManager;
+            string tempResult = "";
+
+            if (Validation.GetUserInput(prompt, "str") == "stack")
             {
-                tempInt = 1;
+                //tempInt = 1;
+                tempResult = "stack";
+                
             }
-            managerType = tempInt;
+            else
+            {
+                return "queue";
+            }
+
+            //10-18-19 TLC managerType = tempInt;
+            return tempResult;
         }
+
 
         public static void Welcome()
         {

@@ -14,26 +14,9 @@ namespace Sweepstakes
         Random random = new Random();
 
         //constructor
-        //public MarketingFirm(int managerTypeIn)
-        public MarketingFirm(int managerTypeIn)
+        public MarketingFirm(ISweepstakesManager managerTypeIn)
         {
-            switch (managerTypeIn)
-            {
-                case 0:
-                    {
-                        this.sweepstakesManager = new SweepstakesStackManager();
-                        break;
-                    }
-                case 1:
-                    {
-                        this.sweepstakesManager = new SweepstakesQueueManager();
-                        break;
-                    }
-                default:
-                    {
-                        break;
-                    }
-            }
+            sweepstakesManager = managerTypeIn;
         }
 
         //member methods

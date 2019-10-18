@@ -10,7 +10,8 @@ namespace Sweepstakes
     public class SweepstakesQueueManager : ISweepstakesManager
     {
         //member variables
-        Queue queue = new Queue();
+        //10-18-19 TLC Queue queue = new Queue();
+        Queue<Sweepstakes> queue = new Queue<Sweepstakes>();
             
         //constructor
         public SweepstakesQueueManager()
@@ -26,7 +27,8 @@ namespace Sweepstakes
 
         public Sweepstakes GetSweepstakes()
         {
-            return queue.Dequeue() as Sweepstakes;
+            //10-18-19 TLC return queue.Dequeue() as Sweepstakes;
+            return queue.Dequeue();
         }
     }
 }

@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassFiles\Contestant.cs" />
+    <Compile Include="ClassFiles\ManagerFactory.cs" />
     <Compile Include="ClassFiles\IParticipant.cs" />
     <Compile Include="ClassFiles\ISweepstakesManager.cs" />
     <Compile Include="ClassFiles\MarketingFirm.cs" />

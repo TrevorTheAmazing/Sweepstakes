@@ -67,6 +67,7 @@ namespace Sweepstakes.ClassFiles
                         return "";
                 }
             } while (!inputIsValid);
+        
         }
 
         private static bool ValidStr(string Input)
